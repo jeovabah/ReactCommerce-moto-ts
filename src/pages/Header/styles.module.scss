@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Poppins:wght@400;500&family=Rubik+Puddles&display=swap');
+
+.header {
+    padding: 0 2rem;
+    height: 6rem;
+    background: #6DD47E;
+    box-shadow: 4px 4px 4px 2px;
+
+    div {
+        display: flex;
+        max-width: 1120px;
+        margin: 0 auto;
+        height: 5.5rem;
+    }
+    
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        ul {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-bottom: 0;
+            
+            @media screen and (max-width: 500px) {
+                display: none;
+            }
+            
+            li {
+               margin-right: 1rem;
+                list-style: none;                
+                a {
+                    font-size: 1.5rem;
+                    float: left;
+                    text-decoration: none;
+                    display: block;
+                    padding: 0 1rem;
+                    transition: filter 0.2s;
+                 &:hover {
+                     filter: brightness(0.8);
+                 }   
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        
+    }
+    @media screen and (max-width: 500px) {
+        div {
+            margin: 0;
+            
+        }
+        .menuPc {
+            display: none;
+        }
+    }
+}
+.logo {
+    h1 {
+        padding: 0 1rem;
+        color: #fff;
+        font-family: 'Grape Nuts', cursive;
+        font-size: 2.5rem;
+        span {
+            display: block;
+            width: 100%;
+            font-size: 1.5rem;
+            font-family: 'Rubik Puddles', cursive;
+        }
+    }
+}
