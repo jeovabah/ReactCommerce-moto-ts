@@ -13,7 +13,10 @@
         flex-direction: column;
     }
     button {
-        margin-top: 1rem;
+        margin-top: 2rem;
+        padding: .5rem;
+        border-radius: 0.5rem;
+        
     }
 }
 .formGroup {
@@ -31,5 +34,6 @@
         border: 1px solid #ccc;
         padding: 0.5rem;
     }
+    
         
 }

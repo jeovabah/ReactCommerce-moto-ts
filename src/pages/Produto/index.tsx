@@ -5,29 +5,12 @@ import styles from "./styles.module.scss"
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, DocumentData, addDoc } from 'firebase/firestore/lite';
 import { Item } from '../../components/Item';
+import { itemCollection } from '../../services/firebase';
 
 
 export const Produto = () => {
   const [items, setItems] = useState<DocumentData[]>([]);
-  const [nameProduct, setNameProduct] = useState("")
-  const [priceProduct, setPriceProduct] = useState(0)
-  // const dataConteudo = data.productData // DADOS DE TESTE LOCAL
-  const firebaseConfig = initializeApp({
-    apiKey: "AIzaSyCv1BiXY2FLa_jq3ksq8PhxnZvxLvXZYsE",
-    authDomain: "crudreactcommerce.firebaseapp.com",
-    projectId: "crudreactcommerce"
-  });
   
-  const db = getFirestore(firebaseConfig)
-  const itemCollection =  collection(db, 'itens')
-
-  async function createProduct() {
-    const product = await addDoc(itemCollection,{
-      name: nameProduct,
-      price: priceProduct
-    })
-  }
-
   useEffect(()=> {
     async function getItem() {
       const data = await getDocs(itemCollection)

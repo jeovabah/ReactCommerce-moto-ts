@@ -35,6 +35,7 @@ export function Item (props: ItemProps) {
             >
               Adicionar ao Carrinho
             </button>
+            
           </div>
         </div>
       </div>
