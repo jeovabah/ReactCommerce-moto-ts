@@ -9,15 +9,15 @@ import { itemCollection, storage } from "../../services/firebase";
 export const RegisterProduct = () => {
     const [nameProduct, setNameProduct] = useState(" ")
     const [priceProduct, setPriceProduct] = useState(0.0)
-    const [imageUrl, setImageUrl] = useState(null)   
 
-    function uploadImage () {
-        if( imageUrl == null) return;
-        const imageRef =  ref(storage, `images/${imageUrl.name + v4()}`);
-        uploadBytes(imageRef, imageUrl).then(()=> {
+    function uploadImage (e: any) {
+        const imageRef =  ref(storage, `images/${e[0].name + v4()}`);
+        
+        uploadBytes(imageRef, e[0].name).then(()=> {
             alert("Imagem enviada com sucesso")
         })
-        console.log(imageUrl)
+        
+        console.log(e[0].name)
     }
 
     async function createProduct() {
@@ -41,7 +41,7 @@ export const RegisterProduct = () => {
                 <div className={styles.formGroup}>
                     <label>Escolha a Imagem:</label>
                     <input type="file" className="form-control" id="image" onChange={(event)=> {
-                        setImageUrl(event.target.files[0])
+                        uploadImage(event?.target?.files)
                     }}  />
                 </div>
                 <button onClick={uploadImage}>
