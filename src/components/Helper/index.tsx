@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./styles.module.scss";
 
 export const Helper = () => {
@@ -16,7 +15,7 @@ export const Helper = () => {
           <a
             className="button-68"
             role="button"
-            href="https://api.whatsapp.com/send?phone=5585996043445&text=Olá Preciso de ajuda na escolha de Suplementos!"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
           >

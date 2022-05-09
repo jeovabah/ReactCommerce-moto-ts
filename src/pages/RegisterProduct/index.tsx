@@ -1,11 +1,7 @@
 import { addDoc } from "firebase/firestore/lite";
-import { ref, uploadBytes } from "firebase/storage";
 import {  useState } from "react";
-import {v4} from "uuid"
 import styles from "./styles.module.scss"
-import { initializeApp } from "firebase/app";
-import { itemCollection, storage } from "../../services/firebase";
-import { url } from "inspector";
+import { itemCollection } from "../../services/firebase";
 import { Header } from "../Header";
 
 export const RegisterProduct = () => {

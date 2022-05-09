@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Helper } from '../../components/Helper'
-import data from '../../data/data'
 import styles from "./styles.module.scss"
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, DocumentData, addDoc } from 'firebase/firestore/lite';
+import {  getDocs, DocumentData } from 'firebase/firestore/lite';
 import { Item } from '../../components/Item';
 import { itemCollection } from '../../services/firebase';
 import { Header } from '../Header';
