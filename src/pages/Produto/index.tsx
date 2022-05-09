@@ -6,6 +6,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, DocumentData, addDoc } from 'firebase/firestore/lite';
 import { Item } from '../../components/Item';
 import { itemCollection } from '../../services/firebase';
+import { Header } from '../Header';
 
 
 export const Produto = () => {
@@ -22,12 +23,14 @@ export const Produto = () => {
   return (
     <section>
       <div className="ajuda">
+      <Header />
+
         <Helper />
       </div>
       <div className={styles.container}>
         {items.map((item,index) => {
           return(
-            <Item key={index} title={item.title} price={item.price} id={item.id}   />
+            <Item key={index} title={item.title} price={item.price} id={item.id} url={item.url}   />
           )
         })}
       </div>

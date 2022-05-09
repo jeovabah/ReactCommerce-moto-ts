@@ -9,7 +9,7 @@ export const Helper = () => {
           className="text-secondary text-center fw-bold"
           style={{ paddingBottom: "10px" }}
         >
-          Não conhece de Suplementos?
+          Nós Temos as Melhores motos para você
           <br />
           Entre em contato e te ajudaremos!
           <br />

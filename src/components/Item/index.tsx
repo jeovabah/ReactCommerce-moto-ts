@@ -4,6 +4,7 @@ interface ItemProps {
   id?: string,
   inCart?:number,
   idN?: number,
+  url?: string
 }
 export function Item (props: ItemProps) {
     return (
@@ -17,7 +18,7 @@ export function Item (props: ItemProps) {
           <img
             className="card-img-top img-fluid img-cont"
             style={{ height: "250px", width: "250px" }}
-            // src={props.id}
+            src={props.url}
             alt="CardImage"
           />
   
