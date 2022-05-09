@@ -4,3 +4,4 @@
 
 ### Notas: 
 #### Projeto, todo feito em React com Typescript e ultilizando Firebase para fazer o crud, que você mesmo pode testar, pois todos tem a permissão. 
+#### No login apresenta uma conta ja setada. User=Admin Senha=Admin
