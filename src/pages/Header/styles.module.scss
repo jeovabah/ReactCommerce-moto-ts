@@ -6,6 +6,8 @@
     background: #6DD47E;
     box-shadow: 4px 4px 4px 2px;
 
+    
+
     div {
         display: flex;
         max-width: 1120px;
@@ -27,6 +29,7 @@
             
             @media screen and (max-width: 500px) {
                 display: none;
+            
                 
             }
             
@@ -46,6 +49,7 @@
                 }
             }
         }
+        
     }
     
     @media screen and (max-width: 768px) {
@@ -73,6 +77,23 @@
             width: 100%;
             font-size: 1.5rem;
             font-family: 'Rubik Puddles', cursive;
+        }
+    }
+}
+#navMobile  {
+    display: none;
+    a {
+        text-decoration: none;
+
+    }
+
+    @media screen and (max-width: 500px) {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+        
+        a {
+            margin-right: 20px;
         }
     }
 }
