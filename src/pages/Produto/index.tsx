@@ -30,7 +30,7 @@ export const Produto = () => {
       <div className={styles.container}>
         {items.map((item,index) => {
           return(
-            <Item key={index} title={item.title} price={item.price} id={item.id} url={item.url}   />
+            <Item key={index} title={item.title} price={item.price} id={item.id} url={item.url} marca={item.marca} cc={item.cc}  />
           )
         })}
       </div>

@@ -12,18 +12,19 @@ export const RegisterProduct = () => {
     const [nameProduct, setNameProduct] = useState(" ")
     const [priceProduct, setPriceProduct] = useState(0.0)
     const [urlImage, setUrlImage] = useState(" ")
+    const [marcaProduct, setMarcaProduct] = useState(" ")
+    const [ccProduct, setCcProduct] = useState(" ")
     
 
     async function createProduct() {
       const product = await addDoc(itemCollection,{
         title:nameProduct,
         price:priceProduct,
-        url:urlImage
+        url:urlImage,
+        marca: marcaProduct,
+        cc: ccProduct
       })
       alert("Produto foi Cadastrado")
-        setNameProduct("")
-        setPriceProduct(0.0)
-        setUrlImage("")
     }
     return (
         <>
@@ -42,11 +43,23 @@ export const RegisterProduct = () => {
                 </div>
                 <div className={styles.formGroup}>
                     <label>Link de Imagem:</label>
-                    <input type="text" className="form-control" id="image" onChange={(event)=> {
+                    <input type="text" className="form-control" placeholder="Link" id="image" onChange={(event)=> {
                         setUrlImage(event.target.value)
                     }}  />
                 </div>
-                <button onClick={createProduct}>
+                <div className={styles.formGroup}>
+                    <label>Marca da Moto: </label>
+                    <input type="text" className="form-control" placeholder="Marca" id="image" onChange={(event)=> {
+                        setMarcaProduct(event.target.value)
+                    }}  />
+                </div>
+                <div className={styles.formGroup}>
+                    <label>Cilindradas da Moto</label>
+                    <input type="text" className="form-control" placeholder="Cilindradas" id="image" onChange={(event)=> {
+                        setCcProduct(event.target.value)
+                    }}  />
+                </div>
+                <button onClick={()=>{createProduct()}}>
                     Cadastrar Produto
                 </button>
             </div>
