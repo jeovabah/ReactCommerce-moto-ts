@@ -7,7 +7,7 @@ import { Header } from "../Header";
 export const RegisterProduct = () => {
     const [nameProduct, setNameProduct] = useState(" ")
     const [priceProduct, setPriceProduct] = useState(0.0)
-    const [urlImage, setUrlImage] = useState(" ")
+    const [urlImage, setUrlImage] = useState("https://e7.pngegg.com/pngimages/723/206/png-clipart-car-vehicle-insurance-motorcycle-motor-vehicle-motorcycle-cartoon-car-computer-wallpaper.png")
     const [marcaProduct, setMarcaProduct] = useState(" ")
     const [ccProduct, setCcProduct] = useState(" ")
     
@@ -27,7 +27,7 @@ export const RegisterProduct = () => {
             <Header />
         <section className={styles.container}>
 
-            <h1> New Product</h1>
+            <h1> Novo Produto </h1>
             <div >
                 <div className={styles.formGroup}>
                     <label>Produto:</label>
@@ -50,12 +50,13 @@ export const RegisterProduct = () => {
                     }}  />
                 </div>
                 <div className={styles.formGroup}>
-                    <label>Cilindradas da Moto</label>
+                    <label>Cilindradas da Moto: </label>
                     <input type="text" className="form-control" placeholder="Cilindradas" id="image" onChange={(event)=> {
-                        setCcProduct(event.target.value)
+                        setCcProduct(event.target.value) 
+
                     }}  />
                 </div>
-                <button onClick={()=>{createProduct()}}>
+                <button className="btn btn-primary text-center fw-bold" onClick={()=>{createProduct()}}>
                     Cadastrar Produto
                 </button>
             </div>

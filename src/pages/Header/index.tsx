@@ -19,13 +19,13 @@ export const Header = () => {
         
         <ul>
           <li>
-            <Link className="btn btn-outline-success" to="/">Home</Link>
+            <Link className="btn btn-outline-success" to="/">Inicio</Link>
           </li>
           <li>
             <Link className="btn btn-outline-success" to="/login">Login</Link>
           </li>
           <li>
-            <Link className="btn btn-outline-success" to="/newproduct">Register Product</Link>
+            <Link className="btn btn-outline-success" to="/newproduct">Registro de Produtos</Link>
           </li>
         </ul>
         
@@ -33,7 +33,7 @@ export const Header = () => {
       </div>
       <div id={styles.navMobile} >
             <Link to="/login">Login</Link>
-            <Link to="/newProduct">Register</Link>
+            <Link to="/newProduct">Registro</Link>
             <Link to="/">Produto</Link>
           </div>
     </header>
